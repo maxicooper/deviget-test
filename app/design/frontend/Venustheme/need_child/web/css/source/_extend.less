@@ -80,6 +80,10 @@ html {
                 font-family: @cursiva;
                 font-size: 5rem;
                 margin-bottom: 0;
+                color: @color1;
+            }
+            &:hover {
+                text-decoration: none;
             }
         }
     }
@@ -118,6 +122,65 @@ html {
                 padding: 20px;
                 font-size: 3rem;
                 color: @color1;
+            }
+        }
+    }
+    #product {
+        text-align: center;
+    }
+}
+
+// Product page
+.catalog-product-view {
+    #maincontent {
+        .page-title-wrapper {
+            text-align: center;
+        }
+        .columns {
+            .column.main {
+                .fotorama__stage {
+                    img {
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .product.info.detailed {
+                    .product.data.items {
+                        .data.switch .counter {
+                            color: inherit;
+                        }
+                        #reviews {
+                            ol.review-items {
+                                margin-top: 30px;
+                                li {
+                                    padding: 30px;
+                                    &:hover {
+                                        background: @color1;
+                                        cursor: pointer;
+                                        -webkit-transition: background 200ms linear, color 200ms linear;
+                                        -ms-transition: background 200ms linear, color 200ms linear;
+                                        transition: background 200ms linear, color 200ms linear;
+                                    }
+                                    &:nth-child(even) {
+                                        &:hover {
+                                            color: red;
+                                        }
+                                    }
+                                    &:nth-child(odd) {
+                                        &:hover {
+                                            color: yellow;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                iframe {
+                    display: block;
+                    margin: 0 auto;
+                }
             }
         }
     }
